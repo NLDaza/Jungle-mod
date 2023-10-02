@@ -5,7 +5,7 @@ Functions are meant to work inside an object although not specified. For example
 Example:
 ```LUA
 local deck = Global.getObjectFromGUID('12db6') -- 'Global' is a static class of Tabletop Simulator
-local card = deck.takeObject() -- We filled the object 'deck' in the above line giving it this structure: https://api.tabletopsimulator.com/object/
+local card = deck.takeObject() -- We filled the object 'deck' in the line above giving it this structure: https://api.tabletopsimulator.com/object/
 ```
 
 ## Search for objects
