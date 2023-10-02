@@ -1,6 +1,6 @@
 Every function has a link to the official documentation. If a function has no link, there is no documentation for it.
 
-Functions are meant to work inside an object although not specified. For example, 'Search for objects' functions work with the object 'Global' but all functions inside 'Container' need an container object like a deck, a bag, a zone or 'Global'. 
+Functions are meant to work inside an object although not specified. For example, 'Search for objects' functions work with the object 'Global' but all functions inside 'Container' need a container object like a deck, a bag, a zone or 'Global'. 
 
 Example:
 ```LUA
