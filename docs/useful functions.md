@@ -1,17 +1,18 @@
 Every function has a link to the official documentation. If a function has no link, there is no documentation for it.
 
-Functions are meant to work inside an object although not specified. For example, 'Search for objects' functions work with the object 'Global' but all functions inside 'Container' need a container object like a deck, a bag, a zone or 'Global'. 
+Functions are meant to work inside an object although not specified. 'Global' is a static class of Tabletop Simulator that contains all other objects, but you can narrow your operations with containers like: decks, bags and zones.
 
 Code example:
 ```LUA
-local deck = Global.getObjectFromGUID('12db6') -- 'Global' is a static class of Tabletop Simulator
-local card = deck.takeObject() -- We filled the object 'deck' in the line above giving it this structure: https://api.tabletopsimulator.com/object/
+local deck = Global.getObjectFromGUID('12db6') -- from all objects, returns the one that has the specified GUID
+local card = deck.takeObject() -- from the objects inside the 'deck' container, return the top one.
+-- Every Tabletop Simulator's object has this structure: https://api.tabletopsimulator.com/object/
 ```
 
 ## Search for objects
-[Global.getObjectFromGUID(string)](https://api.tabletopsimulator.com/base/#getobjectfromguid): returns a specific object so you can operate on it.
+[.getObjectFromGUID(string)](https://api.tabletopsimulator.com/base/#getobjectfromguid): returns a specific object so you can operate on it.
 
-Global.getObjectsWithTag(string): returns all objects with specified tag. (Ícaro: It may only work with Global.getObjectsWithTag(string) and no other container. Needs more research.)
+.getObjectsWithTag(string): returns all objects with specified tag. (Ícaro: It may only work with Global.getObjectsWithTag(string) and no other container. Needs more research.)
 
 ## Containers
 [.getObjects()](https://api.tabletopsimulator.com/object/#getobjects): returns all objects inside the container.
