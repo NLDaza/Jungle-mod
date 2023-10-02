@@ -1,4 +1,4 @@
-Every function has a link to the official documentation. If a function has no link, there is no documentation for it.
+Every function has a link to the official documentation except if there is no documentation for it.
 
 Functions are meant to work inside an object although not specified. 'Global' is a static class of Tabletop Simulator that contains all other objects, but you can narrow your operations with containers like: decks, bags and zones.
 
