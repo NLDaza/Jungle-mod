@@ -1,9 +1,11 @@
 Every function has a link to the official documentation. If a function has no link, there is no documentation for it.
 
-## Search for objects
-[.getObjectFromGUID(string)](https://api.tabletopsimulator.com/base/#getobjectfromguid): returns a specific object so you can operate on it.
+Functions are meant to work inside an object although not specified. For example, 'Search for objects' work with the object 'Global' but all functions inside 'Container' needs an container object like a deck, bag, zone or 'Global'.
 
-.getObjectsWithTag(string): returns all objects with specified tag. (Ícaro: It may only work with Global.getObjectsWithTag(string). Needs more research.)
+## Search for objects
+[Global.getObjectFromGUID(string)](https://api.tabletopsimulator.com/base/#getobjectfromguid): returns a specific object so you can operate on it.
+
+Global.getObjectsWithTag(string): returns all objects with specified tag. (Ícaro: It may only work with Global.getObjectsWithTag(string) and no other container. Needs more research.)
 
 ## Containers
 [.getObjects()](https://api.tabletopsimulator.com/object/#getobjects): returns all objects inside the container.
