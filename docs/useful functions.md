@@ -1,4 +1,4 @@
-Every function has a link to the official documentation. If the function has no link, there is no documentation for it.
+Every function has a link to the official documentation. If a function has no link, there is no documentation for it.
 
 ## Search for objects
 [.getObjectFromGUID(string)](https://api.tabletopsimulator.com/base/#getobjectfromguid): returns a specific object so you can operate on it.
