@@ -1,11 +1,37 @@
---[[ Lua code. See documentation: https://api.tabletopsimulator.com/ --]]
+local scriptingZonesGUIDs = {
+    decks = {
+        White = "ad40d7",
+        Pink = "12b24d",
+        Purple = "3b2dd1",
+        Blue = "cfe124",
+        Green = "5b7479",
+        Yellow = "0e7d85",
+        Orange = "ae2b1c",
+        Red = "ae2b1c"
+    }
+}
 
---[[ The onLoad event is called after the game save finishes loading. --]]
+local scriptingZones = {
+    decks = {}
+}
+
 function onLoad()
-    --[[ print('onLoad!') --]]
+    scriptingZones.decks = getScriptingZonesOfSeatedPlayers(scriptingZonesGUIDs.decks)
 end
 
---[[ The onUpdate event is called once per frame. --]]
-function onUpdate()
-    --[[ print('onUpdate loop!') --]]
+function onPlayerChangeColor(player_color)
+    scriptingZones.decks = getScriptingZonesOfSeatedPlayers(scriptingZonesGUIDs.decks)
+end
+
+function getScriptingZonesOfSeatedPlayers(guids)
+    local scriptingZones = {}
+
+    for _, playerColor in pairs(getSeatedPlayers()) do
+        local playerColorString = tostring(playerColor)
+        local scriptingZoneGuid = guids[playerColorString]
+        
+        scriptingZones[playerColorString] = getObjectFromGUID(scriptingZoneGuid)
+    end
+
+    return scriptingZones
 end
