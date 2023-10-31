@@ -11,16 +11,16 @@ local scriptingZonesGUIDs = {
     }
 }
 
-local scriptingZones = {
+local scriptingZonesOfSeatedPlayers = {
     decks = {}
 }
 
 function onLoad()
-    scriptingZones.decks = getScriptingZonesOfSeatedPlayers(scriptingZonesGUIDs.decks)
+    scriptingZonesOfSeatedPlayers.decks = getScriptingZonesOfSeatedPlayers(scriptingZonesGUIDs.decks)
 end
 
 function onPlayerChangeColor(player_color)
-    scriptingZones.decks = getScriptingZonesOfSeatedPlayers(scriptingZonesGUIDs.decks)
+    scriptingZonesOfSeatedPlayers.decks = getScriptingZonesOfSeatedPlayers(scriptingZonesGUIDs.decks)
 end
 
 function getScriptingZonesOfSeatedPlayers(guids)
